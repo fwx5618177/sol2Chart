@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "test": "ts-node src/tests/parse.spec.ts"
+    "test": "jest"
   },
   "engines": {
     "node": ">=18.0",
@@ -17,10 +17,15 @@
   "dependencies": {
     "@solidity-parser/parser": "^0.16.1",
     "d3": "^7.8.5",
-    "js-graph-algorithms": "^1.0.18"
+    "js-graph-algorithms": "^1.0.18",
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@types/d3": "^7.4.0",
+    "@types/jest": "^29.5.3",
+    "@types/react": "^18.2.14",
+    "jest": "^29.6.1",
+    "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1"
   }
 }

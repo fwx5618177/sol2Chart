@@ -1,4 +1,4 @@
-import { generator } from "src/generator/generator";
+import { generator } from "../generator/generator"
 
 const code = `pragma solidity >=0.8.0 <0.9.0;
 //SPDX-License-Identifier: MIT
@@ -33,4 +33,11 @@ contract YourContract {
 
 const result = generator(code)
 
-console.log(result)
+describe('generator', () => {
+    it('should return a string', () => {
+        expect(typeof result).toBe('object')
+        expect(result).toHaveProperty('type')
+        expect(result).toHaveProperty('children')
+
+    })
+})

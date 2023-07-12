@@ -1,0 +1,310 @@
+{
+    "children": [
+        {
+            "name": "solidity",
+            "type": "PragmaDirective",
+            "value": ">=0.8.0 <0.9.0"
+        },
+        {
+            "path": "hardhat/console.sol",
+            "pathLiteral": {
+                "isUnicode": [
+                    false
+                ],
+                "parts": [
+                    "hardhat/console.sol"
+                ],
+                "type": "StringLiteral",
+                "value": "hardhat/console.sol"
+            },
+            "symbolAliases": null,
+            "symbolAliasesIdentifiers": null,
+            "type": "ImportDirective",
+            "unitAlias": null,
+            "unitAliasIdentifier": null
+        },
+        {
+            "path": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+            "pathLiteral": {
+                "isUnicode": [
+                    false
+                ],
+                "parts": [
+                    "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol"
+                ],
+                "type": "StringLiteral",
+                "value": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol"
+            },
+            "symbolAliases": null,
+            "symbolAliasesIdentifiers": null,
+            "type": "ImportDirective",
+            "unitAlias": null,
+            "unitAliasIdentifier": null
+        },
+        {
+            "path": "@openzeppelin/contracts/access/Ownable.sol",
+            "pathLiteral": {
+                "isUnicode": [
+                    false
+                ],
+                "parts": [
+                    "@openzeppelin/contracts/access/Ownable.sol"
+                ],
+                "type": "StringLiteral",
+                "value": "@openzeppelin/contracts/access/Ownable.sol"
+            },
+            "symbolAliases": null,
+            "symbolAliasesIdentifiers": null,
+            "type": "ImportDirective",
+            "unitAlias": null,
+            "unitAliasIdentifier": null
+        },
+        {
+            "baseContracts": [],
+            "kind": "contract",
+            "name": "YourContract",
+            "subNodes": [
+                {
+                    "isAnonymous": false,
+                    "name": "SetPurpose",
+                    "parameters": [
+                        {
+                            "expression": null,
+                            "identifier": {
+                                "name": "sender",
+                                "type": "Identifier"
+                            },
+                            "isIndexed": false,
+                            "isStateVar": false,
+                            "name": "sender",
+                            "storageLocation": null,
+                            "type": "VariableDeclaration",
+                            "typeName": {
+                                "name": "address",
+                                "stateMutability": null,
+                                "type": "ElementaryTypeName"
+                            }
+                        },
+                        {
+                            "expression": null,
+                            "identifier": {
+                                "name": "purpose",
+                                "type": "Identifier"
+                            },
+                            "isIndexed": false,
+                            "isStateVar": false,
+                            "name": "purpose",
+                            "storageLocation": null,
+                            "type": "VariableDeclaration",
+                            "typeName": {
+                                "name": "string",
+                                "stateMutability": null,
+                                "type": "ElementaryTypeName"
+                            }
+                        }
+                    ],
+                    "type": "EventDefinition"
+                },
+                {
+                    "initialValue": {
+                        "isUnicode": [
+                            false
+                        ],
+                        "parts": [
+                            "Building Unstoppable Apps!!!"
+                        ],
+                        "type": "StringLiteral",
+                        "value": "Building Unstoppable Apps!!!"
+                    },
+                    "type": "StateVariableDeclaration",
+                    "variables": [
+                        {
+                            "expression": {
+                                "isUnicode": [
+                                    false
+                                ],
+                                "parts": [
+                                    "Building Unstoppable Apps!!!"
+                                ],
+                                "type": "StringLiteral",
+                                "value": "Building Unstoppable Apps!!!"
+                            },
+                            "identifier": {
+                                "name": "purpose",
+                                "type": "Identifier"
+                            },
+                            "isDeclaredConst": false,
+                            "isImmutable": false,
+                            "isIndexed": false,
+                            "isStateVar": true,
+                            "name": "purpose",
+                            "override": null,
+                            "storageLocation": null,
+                            "type": "VariableDeclaration",
+                            "typeName": {
+                                "name": "string",
+                                "stateMutability": null,
+                                "type": "ElementaryTypeName"
+                            },
+                            "visibility": "public"
+                        }
+                    ]
+                },
+                {
+                    "body": {
+                        "statements": [],
+                        "type": "Block"
+                    },
+                    "isConstructor": true,
+                    "isFallback": false,
+                    "isReceiveEther": false,
+                    "isVirtual": false,
+                    "modifiers": [],
+                    "name": null,
+                    "override": null,
+                    "parameters": [],
+                    "returnParameters": null,
+                    "stateMutability": "payable",
+                    "type": "FunctionDefinition",
+                    "visibility": "default"
+                },
+                {
+                    "body": {
+                        "statements": [
+                            {
+                                "expression": {
+                                    "left": {
+                                        "name": "purpose",
+                                        "type": "Identifier"
+                                    },
+                                    "operator": "=",
+                                    "right": {
+                                        "name": "newPurpose",
+                                        "type": "Identifier"
+                                    },
+                                    "type": "BinaryOperation"
+                                },
+                                "type": "ExpressionStatement"
+                            },
+                            {
+                                "expression": {
+                                    "arguments": [
+                                        [
+                                            "Object"
+                                        ],
+                                        [
+                                            "Object"
+                                        ],
+                                        [
+                                            "Object"
+                                        ]
+                                    ],
+                                    "expression": {
+                                        "expression": [
+                                            "Object"
+                                        ],
+                                        "memberName": "log",
+                                        "type": "MemberAccess"
+                                    },
+                                    "identifiers": [],
+                                    "names": [],
+                                    "type": "FunctionCall"
+                                },
+                                "type": "ExpressionStatement"
+                            },
+                            {
+                                "eventCall": {
+                                    "arguments": [
+                                        [
+                                            "Object"
+                                        ],
+                                        [
+                                            "Object"
+                                        ]
+                                    ],
+                                    "expression": {
+                                        "name": "SetPurpose",
+                                        "type": "Identifier"
+                                    },
+                                    "identifiers": [],
+                                    "names": [],
+                                    "type": "FunctionCall"
+                                },
+                                "type": "EmitStatement"
+                            }
+                        ],
+                        "type": "Block"
+                    },
+                    "isConstructor": false,
+                    "isFallback": false,
+                    "isReceiveEther": false,
+                    "isVirtual": false,
+                    "modifiers": [],
+                    "name": "setPurpose",
+                    "override": null,
+                    "parameters": [
+                        {
+                            "expression": null,
+                            "identifier": {
+                                "name": "newPurpose",
+                                "type": "Identifier"
+                            },
+                            "isIndexed": false,
+                            "isStateVar": false,
+                            "name": "newPurpose",
+                            "storageLocation": "memory",
+                            "type": "VariableDeclaration",
+                            "typeName": {
+                                "name": "string",
+                                "stateMutability": null,
+                                "type": "ElementaryTypeName"
+                            }
+                        }
+                    ],
+                    "returnParameters": null,
+                    "stateMutability": null,
+                    "type": "FunctionDefinition",
+                    "visibility": "public"
+                },
+                {
+                    "body": {
+                        "statements": [],
+                        "type": "Block"
+                    },
+                    "isConstructor": false,
+                    "isFallback": false,
+                    "isReceiveEther": true,
+                    "isVirtual": false,
+                    "modifiers": [],
+                    "name": null,
+                    "override": null,
+                    "parameters": [],
+                    "returnParameters": null,
+                    "stateMutability": "payable",
+                    "type": "FunctionDefinition",
+                    "visibility": "external"
+                },
+                {
+                    "body": {
+                        "statements": [],
+                        "type": "Block"
+                    },
+                    "isConstructor": false,
+                    "isFallback": true,
+                    "isReceiveEther": false,
+                    "isVirtual": false,
+                    "modifiers": [],
+                    "name": null,
+                    "override": null,
+                    "parameters": [],
+                    "returnParameters": null,
+                    "stateMutability": "payable",
+                    "type": "FunctionDefinition",
+                    "visibility": "external"
+                }
+            ],
+            "type": "ContractDefinition"
+        }
+    ],
+    "type": "SourceUnit"
+}
