@@ -1,4 +1,4 @@
-import { generator } from "../generator/generator"
+import { generator } from "../packages/CodeFlow/src/generator/generator"
 
 const code = `pragma solidity >=0.8.0 <0.9.0;
 //SPDX-License-Identifier: MIT

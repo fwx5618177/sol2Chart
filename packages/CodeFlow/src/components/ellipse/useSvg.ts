@@ -14,7 +14,7 @@ export interface useSvgProps {
 }
 
 export const useSvg = (svgRef: useSvgProps['svgRef'], options: useSvgProps['options']) => {
-  const svg: d3.Selection<null, unknown, null, undefined> = d3.select(svgRef.current);
+  const svg = d3.select(svgRef?.current);
 
   return { ...options, svg };
 };

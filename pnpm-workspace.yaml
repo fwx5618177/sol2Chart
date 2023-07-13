@@ -1,0 +1,4 @@
+name: "sol2chart"
+packages:
+  - "packages/CodeFlow"
+  - "packages/sample"

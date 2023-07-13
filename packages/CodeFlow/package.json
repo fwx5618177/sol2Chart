@@ -1,0 +1,28 @@
+{
+  "name": "@sol2chart/CodeFlow",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "test": "jest"
+  },
+  "engines": {
+    "node": ">=18.0",
+    "pnpm": ">=8.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@solidity-parser/parser": "^0.16.1",
+    "d3": "^7.8.5",
+    "jointjs": "^3.7.4",
+    "js-graph-algorithms": "^1.0.18"
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.0",
+    "@types/react": "^18.2.14",
+    "ts-node": "^10.9.1"
+  }
+}
