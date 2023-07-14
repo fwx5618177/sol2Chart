@@ -1,7 +1,6 @@
-import React, { useEffect, useRef } from 'react';
-// import { useSvg } from './useSvg';
+import React, { useCallback, useEffect, useRef } from 'react';
 import * as d3 from 'd3'
-import { useSvgProps } from './useSvg';
+import { useSvgProps } from '../useSvg';
 
 const Ellipse = () => {
     const svgRef = useRef(null);
@@ -12,7 +11,7 @@ const Ellipse = () => {
     }
     // const { svg, cx, cy, rx, ry } = useSvg(svgRef, { width: 300, height: 200, cx: 150, cy: 100, rx: 100, ry: 80 });
 
-    const initial = () => {
+    const initial = useCallback(() => {
       const svg = d3.select(svgRef?.current);
 
       svg
@@ -23,12 +22,12 @@ const Ellipse = () => {
           .attr('ry', options.ry)
           .attr('fill', 'blue');
       
-    }
+    }, [options.cx, options.cy, options.rx, options.ry])
 
 
     useEffect(() => {
       initial()
-    }, []);
+    }, [initial]);
   
 
     return (
