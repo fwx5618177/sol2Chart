@@ -48,20 +48,57 @@ const Rect: FC<RectProps> = ({ width, height }) => {
       .on("mouseout", handleMouseOut);
   };
 
+  const handleDrag = (
+    rect: d3.Selection<SVGRectElement, unknown, HTMLElement, any>
+  ) => {
+    const dragHandler = drag<SVGRectElement, { x: number; y: number }>()
+      .on(
+        "start",
+        (
+          event: d3.D3DragEvent<
+            SVGRectElement,
+            unknown,
+            { x: number; y: number }
+          >
+        ) => {
+          console.log("start:", event);
+          rect
+            .raise()
+            .attr("stroke", "black")
+            .attr("stroke-width", 1)
+            .attr("x-start", event.x)
+            .attr("y-start", event?.y);
+        }
+      )
+      .on(
+        "drag",
+        (
+          event: d3.D3DragEvent<
+            SVGRectElement,
+            unknown,
+            { x: number; y: number }
+          >
+        ) => {
+          console.log("drag:", event);
+          // 计算偏移量
+          const dx: number = event.x - +rect.attr("x-start");
+          const dy: number = event.y - +rect.attr("y-start");
+
+          rect
+            .attr("x", +rect.attr("x-start") + dx)
+            .attr("y", +rect.attr("y-start") + dy);
+        }
+      );
+
+    rect.call(dragHandler);
+  };
+
   useEffect(() => {
     const rect = select(rectRef?.current);
 
-    const dragHandler = drag()
-      .on("start", () => {
-        rect.raise().attr("stroke", "black").attr("stroke-width", 2);
-      })
-      .on("drag", (event) => {
-        rect.attr("x", event?.x).attr("y", event?.y);
-      })
-      .on("end", () => {});
     handleSet(rect);
 
-    rect.call(dragHandler);
+    handleDrag(rect);
   }, [height, isSelected, width]);
 
   return (

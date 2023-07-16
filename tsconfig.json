@@ -13,7 +13,5 @@
     "strict": false,
     "skipLibCheck": true
   },
-  "include": [
-    "./vite-env.d.ts"
-  ]
+  "include": ["./vite-env.d.ts"]
 }
